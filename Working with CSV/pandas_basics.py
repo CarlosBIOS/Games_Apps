@@ -14,6 +14,7 @@
 # Series: Uma série é um array unidimensional rotulado. As rótulas são chamadas de "índices".
 # DataFrames: Um DataFrame é uma estrutura de dados bidimensional rotulada semelhante a uma planilha. As colunas são
 # rotuladas com nomes e as linhas são rotuladas com índices.
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_dict.html  sobre o read_csv().to_dict
 import pandas
 import csv
 # import webbrowser

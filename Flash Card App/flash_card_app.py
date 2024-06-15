@@ -14,7 +14,7 @@ def count_time(count):
 
 
 def right_wrong_button():
-    if len(data) == 0:
+    if data:
         return
     canvas.itemconfig(image1, image=image_object[1])
     canvas.itemconfig(text1, text='French')

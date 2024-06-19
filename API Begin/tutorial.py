@@ -42,6 +42,7 @@ time_now = datetime.now()
 
 while True:
     time.sleep(60)
-    if (iss_latitude, iss_longitude) == (MY_LAT, MY_LONG) and (datetime.now().hour >= sunset or datetime.now().hour <= sunrise):
+    if (iss_latitude, iss_longitude) == (MY_LAT, MY_LONG) and (datetime.now().hour >= sunset or datetime.now().hour <=
+                                                               sunrise):
         message = 'Subject: Look up\n\n The ISS is above you in the sky!'
         send_emails(message)

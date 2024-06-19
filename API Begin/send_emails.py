@@ -2,7 +2,7 @@ import smtplib
 import os
 
 
-def send_emails(message: bytes | str, receiver: str) -> None:
+def send_emails(message: bytes | str, receiver: str = 'portfoliowebsitepython@gmail.com') -> None:
     host: str = 'smtp.gmail.com'
     # Hotmail: smtp.live.com
     # Outlook: outlook.office365.com

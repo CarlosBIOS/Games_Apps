@@ -20,4 +20,4 @@ Subject: Happy Birthday!
 # Vou a este site para executar todos os dias o código:
 # Vou a Files e na pasta que está o documento executo o open bash, dps escrevo python3 main.py
 # Tenho que colocar a pass no send_emails, pois se não, não ia dar o código
-# Dps, vai a Tasks, coloca a hora e o path: python3 home/CarlosMonteiro/Birthday Email/main.py
+# Dps, vai a Tasks, coloca a hora e o path: python3 qhome/CarlosMonteiro/Birthday Email/main.py

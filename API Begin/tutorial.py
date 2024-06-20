@@ -17,6 +17,7 @@ data: dict = request.json()
 
 iss_latitude = float(data["iss_position"]["latitude"])
 iss_longitude = float(data["iss_position"]["longitude"])
+print(iss_latitude, iss_longitude)
 
 # Os parameters tive que criar para ter acceso aos dados. O url: https://sunrise-sunset.org/api
 # O formatted por default está 1, ou seja, criar uma data mais formatada: 5:58:03 AM

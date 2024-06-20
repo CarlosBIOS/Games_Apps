@@ -1,7 +1,7 @@
 import requests
 
 parameters: dict = {
-    'amount': 10,
+    'amount': 100,
     'type': 'boolean'
 }
 

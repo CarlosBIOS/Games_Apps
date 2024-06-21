@@ -29,7 +29,7 @@ data: dict = request2.json()['list']
 text: str = ''
 
 for index in range(len(data)):
-    text += (f'Às {data[index]['dt_txt'][11:16]} vai estar {data[index]['weather'][0]['main']}, ou seja,'
+    text += (f'Olá, às {data[index]['dt_txt'][11:16]} vai estar {data[index]['weather'][0]['main']}, ou seja,'
              f' {data[index]['weather'][0]['description']}. A temperatura mínima é {data[index]['main']['temp_min']}ºC'
              f' e a temperatura máxima é {data[index]['main']['temp_max']}ºC.\n')
 

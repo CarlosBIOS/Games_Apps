@@ -30,7 +30,7 @@ response = requests.post(NUTRITIONIX_ENDPOINT, json=parameters_nlp, headers=head
 result: list = response.json()['exercises']
 
 URL_SHEETY: str = 'https://api.sheety.co/8b7e60d13c620b9438e6355ca1c56375/cópiaDeMyWorkouts/workouts'
-bearer_headerss: dict = {"Authorization": f"Bearer {getenv('token_sheety')}"}
+bearer_headers: dict = {"Authorization": f"Bearer {getenv('token_sheety')}"}
 
 for exercise in result:
     sheet_inputs = {

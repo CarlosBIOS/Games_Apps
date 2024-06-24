@@ -44,5 +44,3 @@ for exercise in result:
     }
 
     sheet_response = requests.post(URL_SHEETY, json=sheet_inputs, headers=bearer_headers)
-
-    print(sheet_response.text)

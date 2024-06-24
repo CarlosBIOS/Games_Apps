@@ -29,25 +29,19 @@ headers: dict = {
 response = requests.post(NUTRITIONIX_ENDPOINT, json=parameters_nlp, headers=headers)
 result: list = response.json()['exercises']
 
-today_date = datetime.now().strftime("%d/%m/%Y")
-now_time = datetime.now().strftime("%X")
-
 URL_SHEETY: str = 'https://api.sheety.co/8b7e60d13c620b9438e6355ca1c56375/cópiaDeMyWorkouts/workouts'
-bearer_headers = {
-    "Authorization": f"Bearer {getenv('token_sheety')}"
-}
 
 for exercise in result:
     sheet_inputs = {
         "workout": {
-            "date": today_date,
-            "time": now_time,
+            "date": datetime.now().strftime("%d/%m/%Y"),
+            "time": datetime.now().strftime("%X"),
             "exercise": exercise["name"].title(),
             "duration": exercise["duration_min"],
             "calories": exercise["nf_calories"]
         }
     }
 
-    sheet_response = requests.post(URL_SHEETY, json=sheet_inputs, headers=bearer_headers)
+    sheet_response = requests.post(URL_SHEETY, json=sheet_inputs, headers={"Authorization": f"Bearer {getenv('token_sheety')}"})
 
     print(sheet_response.text)

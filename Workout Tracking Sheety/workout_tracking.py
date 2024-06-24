@@ -4,7 +4,7 @@ from datetime import datetime
 
 # https://sheety.co O site que serve para brincar com os sheets do Google, todas as informações estão no ep 335
 
-APP_ID = getenv('application_id_nutritionix')
+APP_ID: str = getenv('application_id_nutritionix')
 API_KEY: str = getenv('api_key_nutritionix')
 NUTRITIONIX_ENDPOINT = 'https://trackapi.nutritionix.com/v2/natural/exercise'
 GENDER = 'Male'

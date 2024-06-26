@@ -6,11 +6,11 @@ from datetime import datetime
 
 APP_ID: str = getenv('application_id_nutritionix')
 API_KEY: str = getenv('api_key_nutritionix')
-NUTRITIONIX_ENDPOINT = 'https://trackapi.nutritionix.com/v2/natural/exercise'
-GENDER = 'Male'
-WEIGHT_KG = 70
-HEIGHT_CM = 180
-AGE = 22
+NUTRITIONIX_ENDPOINT: str = 'https://trackapi.nutritionix.com/v2/natural/exercise'
+GENDER: str = 'Male'
+WEIGHT_KG: int = 70
+HEIGHT_CM: int = 180
+AGE: int = 22
 
 parameters_nlp: dict = {
     'query': input('Tell me, which exercise you did: '),

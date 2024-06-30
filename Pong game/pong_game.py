@@ -5,6 +5,7 @@ from ball_class import Ball
 import time
 from pygame import init, mixer
 from os import path
+from threading import Thread
 
 
 # # todo: Para criar o Aplicativo, tenho qu executar este código:

@@ -5,7 +5,8 @@ CSS(Cascading Style Sheets) serve para a parte estética do site!! Portanto, se 
 HTML em relação à estética, o site está mal feito, pois esses mesmo atributos já são considerados como
 lixo(<center> ou <font>, <border>, entre outros). Controla cores, fontes, tamanhos, layout, posicionamento, etc.
 Existe 3 maneiras de definir o CSS: Inline(Vamos usá-la quando quero especificar só num elemento), Internal(Vou 
-usá-la quando quero especificar só num Webpage) e External(Quando quero que tenha em mais do que 1 webpage). 
+usá-la quando quero especificar só num Webpage) e External(Quando quero que tenha em mais do que 1 webpage, portanto
+vou ter que criar um ficheiro à parte, por exemplo: style.css). 
 Mais informações, assiste o episódio 366
 
 O JavaScript permite que o site tenha interatividade, dinamismo e funcionalidade. Permite que elementos respondam a 

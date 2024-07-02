@@ -12,6 +12,9 @@ Element selector, Class selector, Id selector, Atribute selector e Universal sel
 Id selector(#word) vs class selector(.word): class selector pode ser usado várias vezes no mesmo documento, enquanto
 o Id só pode ser usado 1 vez!!
 Mais informações, assiste o episódio 366
+Font Size: 1px(pixel): 1/96th inch(0.26 mm); 1 pt(point, e é usado no Word): 0.72th inch(0.35 mm); 1em(basicamente, se
+definir 1em, numa tag e no body tem 20px, então o tamanho dessa tag vai ser 1*20=20px): 100% of parent; 1rem(Se definir
+no head x px, então vai manter esse x pix, mesmo que tenha alterado ao longo do body): 100% root(recomendam usar este)
 
 O JavaScript permite que o site tenha interatividade, dinamismo e funcionalidade. Permite que elementos respondam a 
 ações do usuário, como cliques, digitação e movimento do mouse.

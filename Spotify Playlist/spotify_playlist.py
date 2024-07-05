@@ -10,7 +10,7 @@ def validate_date(data: str) -> str:
     while True:
         try:
             year, month, day = map(int, data.split('-'))
-            if year >= 2000 and 1 <= month <= 12 and 1 <= day <= 31:
+            if 1 <= month <= 12 and 1 <= day <= 31:
                 return data
             else:
                 raise ValueError

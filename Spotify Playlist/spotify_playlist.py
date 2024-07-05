@@ -28,8 +28,8 @@ request.raise_for_status()
 soup = BeautifulSoup(request.text, 'html.parser')
 
 song_names_spans: list = soup.select("li ul li h3")
-artist_names_spans: list = soup.select('li ul li span')
 song_names: list[str] = [song.getText().strip() for song in song_names_spans]
+artist_names_spans: list = soup.select('li ul li span')
 artist_names: list = []
 for artist in artist_names_spans:
     if len(artist.getText().strip()) >= 3:

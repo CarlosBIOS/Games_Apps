@@ -25,6 +25,7 @@ request = requests.get(f'https://www.billboard.com/charts/hot-100/{answer}')
 request.raise_for_status()
 
 soup = BeautifulSoup(request.text, 'html.parser')
+
 song_names_spans: list = soup.select("li ul li h3")
 artist_names_spans: list = soup.select('li ul li span')
 song_names: list[str] = [song.getText().strip() for song in song_names_spans]
@@ -35,9 +36,6 @@ for artist in artist_names_spans:
             artist_names.append(artist.getText().replace(' Featuring ', ',').strip())
         else:
             artist_names.append(artist.getText().strip())
-
-print(song_names)
-print(artist_names)
 
 # Para ter acesso ao Dashboard do spotify, fui a este link: https://developer.spotify.com/dashboard
 
@@ -51,8 +49,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secre
 
 user_id = sp.current_user()["id"]
 
-song_uris = []
-year = answer.split("-")[0]
+song_uris: list = []
 
 for index in range(len(song_names)):
     result = sp.search(q=f"track:{song_names[index]} artist:{artist_names[index]}", type="track")
@@ -69,6 +66,5 @@ for index in range(len(song_names)):
             print(f"{song_names[index]} doesn't exist in Spotify. Skipped.")
 
 playlist = sp.user_playlist_create(user=user_id, name=f"{answer} Billboard 100", public=False)
-print(playlist)
 
 sp.playlist_add_items(playlist_id=playlist["id"], items=song_uris)

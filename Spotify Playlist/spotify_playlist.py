@@ -48,7 +48,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secre
                                                cache_path="token.txt", username='Carlos Jjv',
                                                redirect_uri="http://example.com", scope="playlist-modify-private"))
 
-user_id = sp.current_user()["id"]
+user_id = sp.current_user()["id"]  # Aqui q vai criar o token.txt se colocar o URL no input do run!!!
 
 song_uris: list = []
 

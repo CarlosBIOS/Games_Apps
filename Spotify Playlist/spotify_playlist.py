@@ -16,7 +16,7 @@ def validate_date(data: str) -> str:
             else:
                 raise ValueError
         except ValueError:
-            data = input('Please write a correct date (attention, the year is from 2000): ').strip()
+            data = input('Please write a correct date (attention, the year is from 1900): ').strip()
 
 
 answer: str = validate_date(input('Which year do you want to travel to? Type the data in this format YYYY-MM-DD: ')

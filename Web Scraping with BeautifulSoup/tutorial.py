@@ -1,6 +1,7 @@
 # O módulo BeautifulSoup do Python é utilizado para a extração de dados de arquivos HTML e XML. Ele cria uma árvore de
 # análise a partir dos conteúdos de uma página web, permitindo a navegação, pesquisa e modificação desses dados de
 # maneira simples e eficiente.
+# Tem limitações, por exemplo, não pode usar em todos os browsers. Por isso, no futuro vamos usar o Selenium Webdriver
 from bs4 import BeautifulSoup
 import requests
 # import lxml

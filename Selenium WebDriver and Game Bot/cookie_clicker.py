@@ -22,7 +22,7 @@ time.sleep(10)
 cookie_button = driver.find_element(By.ID, 'bigCookie')
 while True:
     cookie_button.click()
-    time.sleep(0.1)
+    time.sleep(0.2)
 
 # driver.get("http://orteil.dashnet.org/experiments/cookie/")
 #

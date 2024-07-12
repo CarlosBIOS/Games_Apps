@@ -50,3 +50,6 @@ time.sleep(7)
 
 driver.switch_to.window(base_window)
 print(driver.title)
+
+# Agora já não posso avançar mais, pois preciso de colocar o meu número de telémovel!!!
+# Em relação às fotos, posso usar este link para gerar uma: https://www.thispersondoesnotexist.com

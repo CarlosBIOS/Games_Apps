@@ -55,3 +55,9 @@ class InternetSpeedTwitterBot:
                                                    'div/div/div/div/div/div/div/div/div[1]/div/div/div/div/div/div[2]/'
                                                    'div/div/div/div')
         tweet.send_keys('oi')
+
+
+if __name__ == '__main__':
+    bot = InternetSpeedTwitterBot()
+    bot.get_internet_speed()
+    bot.tweet_at_provider()

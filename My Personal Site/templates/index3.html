@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+</head>
+<body style="text-align:center">
+    <h1>Jinga</h1>
+    <p>5 * 6</p>
+    <p>{{5 * 6}}</p>
+    <p>Para colocar um random number, tenho que colocar no ficheiro python</p>
+    <p>Random number: {{ num }}</p>
+
+<a href="{{ url_for('get_blog') }}">Go to Blog</a>
+</body>
+<footer>
+    <p>Copyright {{ date }}. Built by Carlos at the App CARLOS BUSINESS</p>
+</footer>
+</html>

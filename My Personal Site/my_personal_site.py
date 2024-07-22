@@ -7,7 +7,13 @@
 # todo Se quiser fazer altereções diretamente no chrome, posso ir à console no inspecionar elementos e escrever:
 #   document.body.contentEditable=true
 #   Faço as alterações e dps instalo o html e substituo no templates
+
+# Ver jinja Documentation: Explica tudo sobre dynamical variables
+# https://jinja.palletsprojects.com/en/2.11.x/templates/
 from flask import Flask, render_template
+from random import randint
+from datetime import datetime
+import requests
 
 app = Flask(__name__)
 
@@ -18,7 +24,29 @@ def hello():
     # Eu sou mesmo obrigado a criar os folders: static e templates. Pois, como flask its a infrastructure e não a
     # library, flask tem regras, e uma dessas regras é se tiver algum ficheiro static ou algum html, tenho que colocar
     # dentro desses fodlers!!!
-    return render_template('index2.html')
+    random_number: int = randint(0, 1000)
+    data_time = datetime.now().strftime('%d-%m-%Y')
+    # Atenção, eu próprio chamei de num, mas se quisesse, podia chamar de número, etc.
+    return render_template('index3.html', num=random_number, date=data_time)
+
+
+@app.route('/guess/<name>')
+def information(name: str):
+    parameters: dict = {
+        'name': name.title()
+    }
+
+    idade = requests.get('https://api.agify.io', params=parameters).json()['age']
+    gender = requests.get('https://api.genderize.io', params=parameters).json()['gender']
+
+    return render_template('index4.html', idade=idade, name=name.title(), gender=gender)
+
+
+@app.route('/blog')
+def get_blog():
+    texts = requests.get('https://api.npoint.io/c790b4d5cab58020d391').json()
+
+    return render_template('index5.html', posts=texts)
 
 
 if __name__ == '__main__':
